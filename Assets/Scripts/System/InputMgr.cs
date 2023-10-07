@@ -134,4 +134,9 @@ public class InputMgr : Singleton<InputMgr>,StarterAssetsInputConfig.IPlayerActi
             OnSprintCancelAction?.Invoke();
         }
     }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        
+    }
 }
