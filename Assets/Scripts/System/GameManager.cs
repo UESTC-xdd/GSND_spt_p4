@@ -5,10 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using StarterAssets;
+using UnityEngine.InputSystem;
 
 public class GameManager : Singleton<GameManager>
 {
     public FirstPersonController PlayerC;
+    public PlayerInput Input;
 
     private GameMode m_CurGameMode = GameMode.GAME;
     public GameMode CurGameMode
@@ -38,12 +40,13 @@ public class GameManager : Singleton<GameManager>
         PlayerC = player.GetComponent<FirstPersonController>();
     }
 
-    [ContextMenu("测试")]
+    [ContextMenu("测试电影模式")]
     public void ChangeToMovieMode()
     {
         UpdateGameMode(GameMode.MOVIE);
     }
 
+    [ContextMenu("测试游戏模式")]
     public void ChangeToGameMode()
     {
         UpdateGameMode(GameMode.GAME);
@@ -60,14 +63,14 @@ public class GameManager : Singleton<GameManager>
                     {
                         OnEnterModeAction?.Invoke(toMode);
                         m_CurGameMode = toMode;
-                        InputMgr.Instance.EnableInput();
+                        Input.enabled = true;
                         break;
                     }
                 case GameMode.MOVIE:
                     {
                         OnEnterModeAction?.Invoke(toMode);
                         m_CurGameMode = toMode;
-                        InputMgr.Instance.DisableInput();
+                        Input.enabled = false;
                         break;
                     }
                 default:
