@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class IInteractable : MonoBehaviour
 {
     public bool Interactable;
+    public bool InteractOnce;
+    public UnityEvent InteractEvt;
 
-    private bool IsPlayerInRange;
+    public bool CanInteract { get; set; }
+    public bool IsPlayerInRange { get; set; }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +27,20 @@ public class IInteractable : MonoBehaviour
         {
             IsPlayerInRange = false;
 
+        }
+    }
+
+    public virtual void OnInteract()
+    {
+        if(CanInteract)
+        {
+            Debug.Log("Interact");
+            InteractEvt?.Invoke();
+            if(InteractOnce)
+            {
+                Interactable = false;
+                IsPlayerInRange = false;
+            }
         }
     }
 }

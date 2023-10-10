@@ -10,6 +10,7 @@ public class UIMgr : Singleton<UIMgr>
 
     public UI_BG BG;
     public UI_MovieBG MovieBG;
+    public UI_CenterPoint CenterPoint;
 
     private void Start()
     {
