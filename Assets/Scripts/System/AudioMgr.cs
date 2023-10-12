@@ -171,6 +171,11 @@ public class AudioMgr : Singleton<AudioMgr>
         SESource_2D.PlayOneShot(clip, 1);
     }
 
+    public void Stop2DSE()
+    {
+        SESource_2D.Stop();
+    }
+
     /// <summary>
     /// 指定位置播放一次3D音效
     /// </summary>
