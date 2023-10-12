@@ -23,7 +23,7 @@ public class FPInteractor : MonoBehaviour
         if (Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0)),
             out RaycastHit hit, float.MaxValue, InteractorLayer,QueryTriggerInteraction.Ignore))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             if (hit.transform.TryGetComponent(out IInteractable interactable))
             {
                 //In Interaction Range
