@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System;
+using UnityEngine.Events;
 
 public class DialogueController : MonoBehaviour
 {
     public InputAction NextDialogAction;
+    public UnityAction OnFinishDialog;
 
     public Text nameText;
     public Text dialogueText;
@@ -59,6 +61,7 @@ public class DialogueController : MonoBehaviour
     {
         if (dialogueQueue.Count == 0)
         {
+            Debug.Log("Dialog Finished");
             EndDialogue();
             return;
         }
@@ -66,6 +69,36 @@ public class DialogueController : MonoBehaviour
         DialogueLine line = dialogueQueue.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(line));
+    }
+
+    public void StartDialogue(DialogueLine[] line, DialogType type)
+    {
+        StopAllCoroutines();
+        dialogueStarted = true;
+        TelephoneUI.SetActive(true);
+        switch (type)
+        {
+            case DialogType.Telephone:
+                {
+                    TelephoneIcon.SetActive(true);
+                    break;
+                }
+            case DialogType.Inspect:
+                {
+                    TelephoneIcon.SetActive(false);
+                    break;
+                }
+            default:
+                break;
+        }
+        dialogueQueue.Clear();
+
+        for (int i = 0; i < line.Length; i++)
+        {
+            dialogueQueue.Enqueue(line[i]);
+        }
+
+        DisplayNextSentence();
     }
 
     public void StartDialogue(DialogueLine line,DialogType type)
@@ -78,7 +111,6 @@ public class DialogueController : MonoBehaviour
             case DialogType.Telephone:
                 {
                     TelephoneIcon.SetActive(true);
-                    CallerText.text = line.name;
                     break;
                 }
             case DialogType.Inspect:
@@ -98,11 +130,13 @@ public class DialogueController : MonoBehaviour
     {
         nameText.text = line.name;
         dialogueText.text = "";
+        CallerText.text = line.name;
         //audioSource.clip = line.audioClip;
         //audioSource.Play();
 
-        if(line.audioClip)
+        if (line.audioClip)
         {
+            AudioMgr.Instance.Stop2DSE();
             AudioMgr.Instance.PlayOneShot2DSE(line.audioClip);
         }
 
@@ -130,13 +164,13 @@ public class DialogueController : MonoBehaviour
 
     IEnumerator WaitForCloseCommand()
     {
-        while(!Input.GetKeyDown(KeyCode.E))
+        while(!Input.GetKeyDown(KeyCode.Space))
         {
             yield return null;
         }
         //SceneManager.LoadScene("SecondFloor");
         TelephoneUI.SetActive(false);
-       
+        OnFinishDialog?.Invoke();
         //Mission1();
     }
 
