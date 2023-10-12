@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class FPInteractor : MonoBehaviour
 {
+    public Transform InspectPos;
     public IInteractable CurInteractable;
     public LayerMask InteractorLayer;
+
+    private Transform CurInspectObjTrans;
+    private Vector3 CurInspectObjOriginPos;
+    private Quaternion CurInspectObjOriginRot;
 
     private void Update()
     {
@@ -68,9 +74,33 @@ public class FPInteractor : MonoBehaviour
 
     public void OnInteract()
     {
-        if (CurInteractable != null)
+        EventMgr.OnInteract?.Invoke();
+        if (CurInteractable != null && CurInteractable.CanInteract)
         {
             CurInteractable.OnInteract();
+        }
+    }
+
+    public void InspectObj(Transform curInspectObjTrans)
+    {
+        CurInspectObjTrans = curInspectObjTrans;
+        CurInspectObjOriginPos = curInspectObjTrans.position;
+        CurInspectObjOriginRot = curInspectObjTrans.rotation;
+
+        curInspectObjTrans.SetParent(InspectPos);
+        curInspectObjTrans.DOLocalMove(Vector3.zero, 0.5f);
+        curInspectObjTrans.DOLocalRotateQuaternion(Quaternion.identity, 0.5f);
+    }
+
+    public void ReturnInspectObj()
+    {
+        if(CurInspectObjTrans!=null)
+        {
+            CurInspectObjTrans.SetParent(null);
+            CurInspectObjTrans.DOMove(CurInspectObjOriginPos, 0.5f);
+            CurInspectObjTrans.DORotateQuaternion(CurInspectObjOriginRot, 0.5f);
+
+            CurInspectObjTrans = null;
         }
     }
 }

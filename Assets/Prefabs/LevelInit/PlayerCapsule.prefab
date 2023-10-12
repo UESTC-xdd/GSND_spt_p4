@@ -80,7 +80,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5393215578589016642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -132,9 +132,9 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.37089622
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -196,8 +196,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.5
+  m_Radius: 0.32
   m_SlopeLimit: 45
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8616685848737228372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 849f86d36cd577649858e9db0558a8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 4
@@ -228,10 +228,10 @@ MonoBehaviour:
   GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   CinemachineCameraTarget: {fileID: 4135013735270702863}
-  TopClamp: 89
-  BottomClamp: -89
+  TopClamp: 90
+  BottomClamp: -90
 --- !u!114 &1978471637655604388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,6 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29eb5cc08f4e9a47aa85a4a99cce365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InspectPos: {fileID: 0}
   CurInteractable: {fileID: 0}
   InteractorLayer:
     serializedVersion: 2

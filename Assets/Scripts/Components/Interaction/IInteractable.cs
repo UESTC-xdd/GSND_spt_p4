@@ -32,15 +32,12 @@ public class IInteractable : MonoBehaviour
 
     public virtual void OnInteract()
     {
-        if(CanInteract)
+        Debug.Log("Interact: " + gameObject.name);
+        InteractEvt?.Invoke();
+        if (InteractOnce)
         {
-            Debug.Log("Interact");
-            InteractEvt?.Invoke();
-            if(InteractOnce)
-            {
-                Interactable = false;
-                IsPlayerInRange = false;
-            }
+            Interactable = false;
+            IsPlayerInRange = false;
         }
     }
 }

@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 
 public class GameManager : Singleton<GameManager>
 {
-    public FirstPersonController PlayerC;
+    public FPInteractor PlayerInteractor;
     public PlayerInput Input;
 
     private GameMode m_CurGameMode = GameMode.GAME;
@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager>
     {
         base.Awake();
         GameObject player = GameObject.FindWithTag("Player");
-        PlayerC = player.GetComponent<FirstPersonController>();
+        PlayerInteractor = player.GetComponent<FPInteractor>();
     }
 
     private void Start()
@@ -37,7 +37,7 @@ public class GameManager : Singleton<GameManager>
     private void OnSceneLoaded(Scene toScene)
     {
         GameObject player = GameObject.FindWithTag("Player");
-        PlayerC = player.GetComponent<FirstPersonController>();
+        PlayerInteractor = player.GetComponent<FPInteractor>();
     }
 
     [ContextMenu("测试电影模式")]
