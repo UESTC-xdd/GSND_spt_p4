@@ -437,7 +437,15 @@ MonoBehaviour:
     m_Id: a29085e5-be7f-4df1-b90c-14820ce33929
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: f28ccf26-a138-4820-bf54-b8a24db920d8
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Next Dialog
+      m_Flags: 0
     m_Flags: 0
   nameText: {fileID: 6460422236178973568}
   dialogueText: {fileID: 7839900021234776779}

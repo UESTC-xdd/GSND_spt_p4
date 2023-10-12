@@ -44,6 +44,8 @@ public class DialogueController : MonoBehaviour
     private void OnEnable()
     {
         NextDialogAction.Enable();
+        NextDialogAction.performed -= OnPressNextDialog;
+        NextDialogAction.performed += OnPressNextDialog;
     }
 
     private void OnDisable()
