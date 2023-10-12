@@ -14527,9 +14527,9 @@ MonoBehaviour:
   EmptyPlate: {fileID: 370835847}
   EmptyPlateOutline: {fileID: 601682070}
   EmptyPlateInteractable: {fileID: 601682069}
-  WaitBakeTime: 4
+  WaitBakeTime: 6
   FoodPlate: {fileID: 673372054}
-  BakeClip: {fileID: 8300000, guid: 1f5d036cef4c7544bae0acaa466d23e5, type: 3}
+  BakeClip: {fileID: 8300000, guid: 9435269e7e1f21d41b317f383e549203, type: 3}
   BedOutline: {fileID: 1660967524}
   BedTrigger: {fileID: 1660967525}
 --- !u!1001 &1068089609
@@ -27279,6 +27279,73 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RealGiftCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: DialogLine.name
+      value: Mike & Tommy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: DialogLine.sentence
+      value: "Happy birthday Mom! Grandma, I promise next year we\u2019ll have the
+        best birthday celebration together! And not just next year, but the year
+        after that, and every year after!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: DialogLine.audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ed6b89ee1fc16fe40aea2c576dd1983e, type: 3}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnEndInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnBeginInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnBeginInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnBeginInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 472922725}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnEndInteract.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnBeginInteract.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnBeginInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayOneShot2DSE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnBeginInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioMgr, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnBeginInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038540378574238819, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
+        type: 3}
+      propertyPath: OnBeginInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6890149532944433189, guid: d424e9f2fd70bf241a00b83f3e17b7b0,
         type: 3}
