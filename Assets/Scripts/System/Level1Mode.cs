@@ -130,5 +130,6 @@ public class Level1Mode : LevelSingleton<Level1Mode>
     {
         BedOutline.enabled = false;
         Debug.Log("Fifth Task Finished");
+        LevelMgr.Instance.LoadNextLevel();
     }
 }
