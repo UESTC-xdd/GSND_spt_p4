@@ -11640,6 +11640,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4038059395031209597, guid: 6f069612759ffef48b9fa2bfec0b65ba,
+        type: 3}
+      propertyPath: Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5704374615139056849, guid: 6f069612759ffef48b9fa2bfec0b65ba,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13028,12 +13033,10 @@ MonoBehaviour:
   ToDoListOutline: {fileID: 1118872000}
   AllCleanOutline:
   - {fileID: 915168291584295485}
-  - {fileID: 2950666221437703041}
   - {fileID: 1012219076476048008}
   - {fileID: 8412789265062694316}
   AllCleanOutInteractables:
   - {fileID: 915168291584295484}
-  - {fileID: 2950666221437703040}
   - {fileID: 1012219076476048007}
   - {fileID: 8412789265062694317}
   EmptyPlate: {fileID: 370835847}
@@ -23528,6 +23531,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4038059395031209597, guid: 6f069612759ffef48b9fa2bfec0b65ba,
+        type: 3}
+      propertyPath: Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5704374615139056849, guid: 6f069612759ffef48b9fa2bfec0b65ba,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -28318,6 +28326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4870777989828243205, guid: e998b1f1b0dc6114191f1cbf1dadd7d2,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870777989828243205, guid: e998b1f1b0dc6114191f1cbf1dadd7d2,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 65
       objectReference: {fileID: 0}
@@ -28393,30 +28406,6 @@ PrefabInstance:
       addedObject: {fileID: 918547143}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e998b1f1b0dc6114191f1cbf1dadd7d2, type: 3}
---- !u!114 &2950666221437703040 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8506447302687521944, guid: e998b1f1b0dc6114191f1cbf1dadd7d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2950666221437703039}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c840e92aafc79f40aad7bc89935e0d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2950666221437703041 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7480491095551852065, guid: e998b1f1b0dc6114191f1cbf1dadd7d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2950666221437703039}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2950666221437703046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5311554003977461339, guid: e998b1f1b0dc6114191f1cbf1dadd7d2,
@@ -31226,6 +31215,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290128212237260816, guid: fde6d6750d54d2240b09e8a7c04001a9,
+        type: 3}
+      propertyPath: DialogLine.name
+      value: Grandma(You)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290128212237260816, guid: fde6d6750d54d2240b09e8a7c04001a9,
+        type: 3}
+      propertyPath: DialogLine.sentence
+      value: This what I need to prepare.
       objectReference: {fileID: 0}
     - target: {fileID: 3290128212237260816, guid: fde6d6750d54d2240b09e8a7c04001a9,
         type: 3}
@@ -35185,7 +35184,7 @@ PrefabInstance:
     - target: {fileID: 1777578704660079152, guid: d56b367587740d24bbf29c93765438ac,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4638639952498054962, guid: d56b367587740d24bbf29c93765438ac,
         type: 3}
@@ -35995,7 +35994,7 @@ PrefabInstance:
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: MoveSpeed
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
@@ -36005,7 +36004,7 @@ PrefabInstance:
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: SprintSpeed
-      value: 3
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
